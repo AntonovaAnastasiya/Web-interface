@@ -27,3 +27,4 @@ test {
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
     System.setProperty("chromeoptions.args", "--no-sandbox")
 }
+
