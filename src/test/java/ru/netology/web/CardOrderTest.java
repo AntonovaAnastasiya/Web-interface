@@ -31,29 +31,19 @@ class CardOrderTest {
 //        }
 //    }
 
-    @BeforeEach
-    public void setUp1() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
-        driver.get("http://localhost:9999");
-    }
+//    @BeforeEach
+//    public void setUp1() {
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--no-sandbox");
+//        options.addArguments("--headless");
+//        driver = new ChromeDriver(options);
+//        driver.get("http://localhost:9999");
+//    }
 
     @BeforeEach
     void setUp2() {
         driver = new ChromeDriver();
-    }
-
-    @BeforeEach
-    public void setUp3() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
-        driver.get("http://localhost:9999");
     }
 
     @AfterEach
@@ -64,6 +54,7 @@ class CardOrderTest {
 
     @Test
     void shouldTestV1() {
+        driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Анастасия Антонова");
         elements.get(1).sendKeys("+79146562545");
@@ -75,7 +66,7 @@ class CardOrderTest {
 
     @Test
     void shouldTestV2() {
-//        driver.get("http://localhost:9999");
+        driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Анастасия-Виктория Петровна");
         elements.get(1).sendKeys("+70000000002");
