@@ -20,9 +20,9 @@ class CardOrderTest {
     @BeforeAll
     public static void setUpAll() {
         if (System.getProperty("os.name").contains("Linux")) {
-            System.setProperty("webdriver.chrome.driver", "Web-interface/driver/linux/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "driver/linux/chromedriver");
         } else {
-            System.setProperty("webdriver.chrome.driver", "Web-interface/driver/win/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
         }
     }
 
